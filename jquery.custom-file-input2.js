@@ -1,4 +1,4 @@
-$(document).on("change", ".inputfile", function (e) { // Improved custom file upload widget
+$(document).on('change', '.inputfile', function (e) { // Improved custom file upload widget
   /**
    * Based on code from https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
    * 
@@ -8,10 +8,11 @@ $(document).on("change", ".inputfile", function (e) { // Improved custom file up
    * 
    */
   const maxfilesize = (501 * 1024 * 1024); // 501 Mb defined in bytes
-  var $input = $(this), 
-  fileLength = this.files[0].size,
-  $inputparent = $input.next('label'), 
-  labelVal = $inputparent.html();
+  var
+    $input = $(this), 
+    fileLength = this.files[0].size,
+    $inputparent = $input.next('label'),
+    labelVal = $inputparent.html();
   if (fileLength <= maxfilesize) {
     var fileName = '';
     if (this.files && this.files.length > 1)
